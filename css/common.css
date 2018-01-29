@@ -1,0 +1,687 @@
+*{margin:0;padding:0;box-sizing: border-box;}
+
+.flex {
+	display: flex;
+}
+.flex-1 {
+	flex: 1;
+}
+.flex-2 {
+	flex: 2;
+}
+.flex-3 {
+	flex: 3;
+}
+.flex-4 {
+	flex: 4;
+}
+.flex-5 {
+	flex: 5;
+}
+
+.flex-6 {
+	flex: 6;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.fontSize0 {
+   font-size: 0;
+}
+
+
+html, body {
+	height: 100%;
+	width: 100%;
+	background: url(../主背景2.png) no-repeat;
+	font-size: 0.15rem;
+	background-size: 100% 100%;
+    background-position: center;
+}
+.container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.middleContent {
+	height: 50%;
+	width: 100%;
+	/*background: #000;*/
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	font-size: 0;
+}
+[data-name='no'] {
+    opacity: 0;
+}
+.left, .right {
+	width: 50%;
+	display: inline-block;
+	height: 100%;
+}
+img {
+	width: 100%;
+	height: 100%;
+}
+.commonWidth {
+	width: 0.2rem;
+}
+.commonHeight {
+	height: 0.2rem;
+
+}
+
+.right {
+	padding-left: 3%;
+	overflow: hidden;
+}
+.rightContent {
+	height: 100%;
+	width: 100%;
+	/*background: #144b73;*/
+	transform: skew(-10deg);
+}
+.ce, .dong, .wei, .lai {
+	position: relative;
+}
+
+.ce .ceImgWidth {
+	width: 0.15rem;
+}
+.ce .ceImgHeight {
+	height: 0.15rem;
+}
+
+.ce>div, .dong>div, .wei>div, .lai>div {
+	position: absolute;
+	overflow: hidden;
+}
+.ce-topLeft1 {
+	left: 0.01rem;
+}
+.ce-topLeft2 {
+    left: 0.15rem;
+}
+
+.ce-topLeftTop1 {
+   left: 0.29rem;
+   top: 0;
+}
+.ce-topLeftTop2 {
+   left: 0.29rem;
+   top: 0.15rem;
+}
+
+.ce-topLeftBottom1, .ce-topLeftBottom2, .ce-topRightBottom1, .ce-topRightBottom2 {
+	left: 0.36rem;
+	top: 0.3rem;
+	transform: skew(35deg);
+}
+.ce-topLeftBottom2 {
+    left: 0.5rem;
+}
+/*竹字头右边部分*/
+.ce-topRight1 {
+	left: 1rem;
+}
+.ce-topRight2 {
+    left: 1.15rem;
+}
+.ce-topRightBottom1 {
+     left: 1.35rem;
+}
+.ce-topRightBottom2 {
+     left: 1.5rem;
+}
+.ce-topRightTop2 {
+        left: 1.3rem;
+    top: 0.15rem;
+}
+.ce-topRightTop1 {
+    left: 1.3rem;
+}
+/*ce字中间横线部分*/
+.ce-middleLeft1 {
+	top: 1.2rem;
+
+}
+.ce-middleLeft2 {
+    top: 1.34rem;
+
+}
+.ce-middleCenter1 {
+	top: 1.6rem;
+	left: 0.14rem;
+}
+.ce-middleCenter2 {
+    top: 1.74rem;
+    left: 0.14rem;
+}
+.ce-bottomLeft1 {
+	top: 1.88rem;
+	left: 0.14rem;
+}
+.ce-bottomLeft2 {
+    top: 1.88rem;
+    left: 0.25rem;
+}
+.ce-bottomRight1 {
+	top: 1.88rem;
+	right: 0.2rem;
+}
+.ce-bottomRight2 {
+    top: 1.88rem;
+    right: 0.34rem;
+}
+/*策字竖线*/
+.ce-shuxian1 {
+	left: 0.9rem;
+	top: 0.9rem;
+}
+.ce-shuxian2 {
+    left: calc(50% - 0.03rem );
+    top: 0.9rem;
+}
+/*ce字撇*/
+.ce-bottomPie1 {
+	left: 39%;
+	top: 2rem;
+	transform: skew(-25deg);
+    transform-origin: right top;
+}
+.ce-bottomPie2 {
+    left: 32.5%;
+    top: 2rem;
+    transform: skew(-25deg);
+    transform-origin: right top;
+}
+.ce-bottomNa1 {
+    right: 39%;
+	top: 2rem;
+	transform: skew(25deg);
+    transform-origin: left top;
+}
+.ce-bottomNa2 {
+    right: 32.5%;
+    top: 2rem;
+    transform: skew(25deg);
+    transform-origin: left top;
+}
+/*策字end*/
+/*动字start*/
+.dong-leftTop {
+	left: 0rem;
+	top: 0.4rem;
+}
+.dong-leftTop2 {
+	left: -0.1rem;
+	top: 0.8rem;
+}
+.ce-leftCenter {
+	    left: 0.3rem;
+        top: 1rem;
+    transform: skew(-20deg);
+    transform-origin: right top;
+}
+.ce-leftBottom {
+	top: 2.19rem;
+	left: 0rem;
+	transform: skew(35deg);
+	transform-origin: left bottom
+}
+.ce-leftRight {
+	left: 0.45rem;
+	top: 2rem;
+	transform: skew(35deg);
+}
+.dong-rightTop {
+	right: 0;
+	top: 0.6rem;
+}
+.dong-rightRight {
+	right: 0;
+	top: 0.6rem;
+        transform: skew(-3deg);
+    transform-origin: right top;
+}
+.dong-rightLeft {
+	right: 0.45rem;
+	top: 0;
+	transform: skew(-5deg);
+    transform-origin: center;
+}
+/*dong 动 end*/
+/*wei start*/
+.wei-top1 {
+	top: 0.4rem;
+	left: 0.2rem;
+}
+.wei-top2 {
+    top: 0.8rem;
+	left: 0;
+}
+.wei-middle {
+	top: 0;
+	left: 49.6%;
+	transform: translateX(-50%);
+}
+.wei-left {
+	left: 35%;
+	top: 1rem;
+	transform: skew(-20deg);
+	transform-origin: right top;
+}
+.wei-right {
+    right: 35%;
+    top: 1rem;
+    transform: skew(20deg);
+    transform-origin: left top;
+}
+/*wei end*/
+/*lai start*/
+.lai-top2 {
+	top: 1rem;
+}
+.lai-left, .lai-right {
+	top:1.2rem;
+}
+.lai-leftPie {
+	left: 0.25rem;
+    transform: skew(35deg);
+    transform-origin: left top;
+    top: 0.8rem;
+    border-radius: 10px;
+}
+.lai-leftNa {
+	right: 0.25rem;
+    transform: skew(-35deg);
+    transform-origin: right top;
+    top: 0.8rem;
+    border-radius: 10px;
+}
+
+/*right end*/
+
+.leftContent {
+    width: 100%;
+    height: 100%;
+    transform: skew(-10deg);
+}
+
+.picutre {
+    width: 0.2rem;
+    height: 0.2rem;
+}
+
+
+/* ---音--- */
+
+.yin {
+    position: relative;
+    background-color: transparent;
+}
+
+.yin img {
+    width: 0.15rem;
+    height: 0.15rem;
+}
+
+.yin .top_vertical {
+    position: absolute;
+    left: 29%;
+    top: 0%;
+    transform: skew(25deg);
+}
+
+.yin .top_horizontal {
+    position: absolute;
+    left: 7%;
+    top: 9%;
+}
+
+.yin .middle_vertical_left {
+    position: absolute;
+    left: 18%;
+    top: 18%;
+    transform: skew(25deg)
+}
+
+.yin .middle_vertical_right {
+    position: absolute;
+    right: 44%;
+    top: 18%;
+    transform: skew(-25deg);
+}
+
+.yin .middle_horizontal {
+    position: absolute;
+    left: 2%;
+    top: 32%;
+}
+
+.yin .bottom_top_horizontal {
+    position: absolute;
+    left: 7%;
+    top: 46%;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+
+.yin .bottom_vertical_left {
+    position: absolute;
+    left: 7%;
+    top: 55%;
+    border-radius: 0 0 0 8px;
+    overflow: hidden;
+}
+
+.yin .bottom_vertical_right {
+    position: absolute;
+    right: 27%;
+    top: 55%;
+    border-radius: 0 0 8px 0;
+    overflow: hidden;
+}
+
+.yin .bottom_middle_horizontal {
+    position: absolute;
+    left: 20%;
+    top: 62%;
+}
+
+.yin .bottom_horizontal {
+    position: absolute;
+    left: 20%;
+    top: 78%;
+}
+
+
+/* ---你--- */
+
+.ni {
+    position: relative;
+    background-color: transparent;
+}
+
+.ni .left_top_vertical {
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    transform: skew(-39deg);
+    transform-origin: left top;
+}
+
+.ni .left_bottom_vertical {
+    position: absolute;
+    left: 0%;
+    top: 20%;
+}
+
+.ni .right_top_vertical {
+    position: absolute;
+    left: 32%;
+    top: 0.2rem;
+    transform: skew(-20deg);
+}
+
+.ni .right_top_horizontal {
+    position: absolute;
+    left: 47%;
+    top: 0.4rem;
+    transform: skew(-20deg);
+    border-radius: 0 8px 0 0;
+    overflow: hidden;
+}
+
+.ni .right_top_right_vertical {
+    position: absolute;
+    left: 82%;
+    top: 0.59rem;
+    transform: skew(-20deg);
+}
+
+.ni .bottom_middle_vertical {
+    position: absolute;
+    left: 56%;
+    top: 0.7rem;
+    border-radius: 0 0 0 5px;
+    overflow: hidden;
+}
+
+.ni .right_bottom_middle_bottom_vertical {
+   position: absolute;
+    top: 72.2%;
+    left: 47%;
+    transform: skew(32deg);
+    transform-origin: right bottom;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+}
+
+.ni .dot_left_vertical {
+    position: absolute;
+    top: 45%;
+    left: 27%;
+    transform: skew(-14deg);
+}
+
+.ni .dot_right_vertical {
+    position: absolute;
+    top: 45%;
+    right: 4%;
+    transform: skew(14deg);
+}
+
+
+/* ---所--- */
+
+.suo {
+    position: relative;
+    background-color: transparent;
+}
+
+.suo .left_top_horizontal {
+    position: absolute;
+    top: 0.2rem;
+    left: 3%;
+    border-radius: 8px 0 0 0;
+    overflow: hidden;
+}
+
+.suo .left_middle_vertical {
+    position: absolute;
+    top: 0.39rem;
+    left: 3%;
+}
+
+.suo .left_bottom_vertical {
+    position: absolute;
+    top: 68.5%;
+    left: 3.7%;
+    transform: skew(-24deg);
+    transform-origin: left top;
+}
+
+.suo .left_right_middle_top_horizontal {
+    position: absolute;
+    top: 25%;
+    left: 16%;
+    border-radius: 0 8px 0 0;
+    overflow: hidden;
+}
+
+.suo .left_right_middle_vertical {
+    position: absolute;
+    top: 31%;
+    left: 29%;
+}
+
+.suo .left_right_middle_bottom_horizontal {
+    position: absolute;
+    top: 43%;
+    left: 16%;
+    border-radius: 0 0 8px 0;
+    overflow: hidden;
+}
+
+.suo .right_top_horizontal {
+    position: absolute;
+    top: 0.2rem;
+    left: 51%;
+    border-radius: 8px 0 0 0;
+    overflow: hidden;
+}
+
+.suo .right_top_vertical {
+    position: absolute;
+    top: 0.39rem;
+    left: 51%;
+}
+
+.suo .right_bottom_vertical {
+    position: absolute;
+    top: 68%;
+    left: 51%;
+    transform: skew(-24deg);
+    transform-origin: left top;
+}
+
+.suo .right_right_middle_horizontal {
+    position: absolute;
+    top: 24%;
+    left: 61%;
+}
+
+.suo .right_right_middle_vertical {
+    position: absolute;
+    top: 30%;
+    left: 73%;
+}
+
+
+/* ---想--- */
+
+.xiang {
+    position: relative;
+    background-color: transparent;
+}
+
+.xiang .left_top_top_vertical {
+    position: absolute;
+    top: 0%;
+    left: 21%;
+}
+
+.xiang .left_top_horizontal {
+    position: absolute;
+    top: 12%;
+    left: 0%;
+}
+
+.xiang .left_top_bottom_vertical {
+    position: absolute;
+    top: 18%;
+    left: 21%;
+}
+
+.xiang .dot_top_left_vertical {
+    position: absolute;
+    top: 18%;
+    left: 2%;
+    transform: skew(-14deg);
+}
+
+.xiang .dot_top_right_vertical {
+    position: absolute;
+    top: 18%;
+    right: 46%;
+    transform: skew(14deg);
+}
+
+.xiang .right_top_horizontal {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+
+.xiang .right_left_vertical {
+    position: absolute;
+    top: 6%;
+    left: 60%;
+    border-radius: 0 0 0 8px;
+    overflow: hidden;
+}
+
+.xiang .right_right_vertical {
+    position: absolute;
+    top: 6%;
+    right: 0%;
+    border-radius: 0 0 8px 0;
+    overflow: hidden;
+}
+
+.xiang .right_middle_top_horizontal {
+    position: absolute;
+    top: 12%;
+    right: 13%;
+}
+
+.xiang .right_middle_bottom_horizontal {
+    position: absolute;
+    top: 25%;
+    right: 13%;
+}
+
+.xiang .right_bottom_horizontal {
+    position: absolute;
+    top: 37%;
+    right: 13%;
+}
+
+.xiang .dot_bottom_left_vertical {
+    position: absolute;
+    top: 49%;
+    left: -3%;
+    transform: skew(-5deg);
+}
+
+.xiang .left_left_vertical {
+    position: absolute;
+    top: 49%;
+    left: 22%;
+    border-radius: 0 0 0 8px;
+    overflow: hidden;
+}
+
+.xiang .bottom_horizontal {
+    position: absolute;
+    top: 80%;
+    left: 35%;
+}
+
+.xiang .right_bottom_right_vertical {
+    position: absolute;
+    top: 62%;
+    left: 69%;
+    transform: skew(14deg);
+}
+
+.xiang .dot_top_center_vertical {
+    position: absolute;
+    top: 49%;
+    left: 45%;
+    transform: skew(14deg);
+}
+
+.xiang .dot_right_vertical {
+    position: absolute;
+    top: 49%;
+    right: 0;
+    transform: skew(14deg);
+}

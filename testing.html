@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<svg id="isvg"  width="1000" height="1000"><defs>    <marker id="idtext"         viewBox="0 0 120 50" refX="0" refY="0"          markerUnits="strokeWidth" markerWidth="20" markerHeight="20"         orient="auto">        <text style="font-family:sans-serif; font-size:14pt;" x="20" y="20"> text </text>     </marker>     </defs><defs>   <marker id="idArrow" viewBox="0 0 20 20" refX="0" refY="10" markerUnits="strokeWidth" markerWidth="3" markerHeight="10" orient="auto">            <path d="M 0 0 L 20 10 L0 20 z"fill="purple"stroke="black"/>     </marker></defs><g >  <path d="M100  100 L105 100 L300 100"  stroke="blue"  stroke-width="3" fill="none" marker-mid="url(#idtext)"   marker-end="url(#idArrow)" /></g><g transform="rotate(339,220,730) translate(220,730) ">                <path d="M0 0 L100 0L500 0"  stroke="blue"  stroke-width="3" fill="none" marker-end="url(#idArrow)" marker-mid="url(#idtext)"   /></g></svg>
+</body>
+</html>
