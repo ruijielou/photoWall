@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body,
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container {
+        position: absolute;
+        background: url(./bg_words3.png) no-repeat center;
+        background-size: 100% 100%;
+        z-index: 999;
+    }
+
+    .photos {
+        position: absolute;
+        height: 60%;
+        width: 70%;
+        border: 1px solid #ccc;
+        top: 45%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        font-size: 0;
+
+    }
+    img {width: 0.25rem;height: 0.25rem;}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    </div>
+    <div class="photos">
+    </div>
+</body>
+<script src="./js/jquery-2.2.3.js"></script>
+
+<script>
+
+	//改变根节点字体大小
+function changeRem(){
+    var currClientWidth, fontValue,originWidth;
+    //originWidth用来设置设计稿原型的屏幕宽度
+    originWidth = 1366;
+    __resize();
+
+    //注册 resize事件
+    window.addEventListener('resize', __resize, false);
+
+    function __resize() {
+        currClientWidth = document.documentElement.clientWidth;
+        //这里是设置屏幕的最大和最小值时候给一个默认值
+        /*if (currClientWidth >= 640) currClientWidth = 640;
+         if (currClientWidth <= 320) currClientWidth = 320;*/
+        //
+        fontValue = ((100 * currClientWidth) /originWidth).toFixed(2);
+        document.documentElement.style.fontSize = fontValue + 'px';
+    }
+}(changeRem());
+
+
+
+	var html = ''
+	var key = 0;
+	for(var i = 0; i<500; i++) {
+
+		key = key++ >= 68 ? 0 : key;
+
+        html += '<img src="./photo/'+ key +'.jpg" alt="" />';
+	}
+	$('.photos').html(html);
+
+	var str = '{"data":1,"url":"http://www.baiodu.com"}'
+	
+	console.log(JSON.parse(str));
+</script>
+
+</html>

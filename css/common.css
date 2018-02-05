@@ -35,7 +35,7 @@
 html, body {
 	height: 100%;
 	width: 100%;
-	background: url(../主背景2.png) no-repeat;
+	background: url(../image/bg2.png) no-repeat;
 	font-size: 0.15rem;
 	background-size: 100% 100%;
     background-position: center;
@@ -52,7 +52,7 @@ html, body {
 	position: absolute;
 	top: 50%;
 	left: 0;
-	transform: translateY(-50%);
+	transform: translateY(-50%) scale(0.9);
 	font-size: 0;
 }
 [data-name='no'] {
@@ -62,6 +62,21 @@ html, body {
 	width: 50%;
 	display: inline-block;
 	height: 100%;
+}
+.topTitle, .bottomTitle {
+    position: absolute;
+    width: 30%;
+}
+.topTitle img, .bottomTitle img {
+    width: 100%;
+} 
+.topTitle {
+    top: -15%;
+    left: 10%;
+}
+.bottomTitle {
+    bottom: -15%;
+    right: 10%;
 }
 img {
 	width: 100%;
@@ -74,7 +89,6 @@ img {
 	height: 0.2rem;
 
 }
-
 .right {
 	padding-left: 3%;
 	overflow: hidden;
@@ -190,13 +204,13 @@ img {
 .ce-bottomPie1 {
 	left: 39%;
 	top: 2rem;
-	transform: skew(-25deg);
+	transform: skew(-30deg);
     transform-origin: right top;
 }
 .ce-bottomPie2 {
     left: 32.5%;
     top: 2rem;
-    transform: skew(-25deg);
+    transform: skew(-30deg);
     transform-origin: right top;
 }
 .ce-bottomNa1 {
@@ -411,7 +425,7 @@ img {
     position: absolute;
     left: 10%;
     top: 5%;
-    transform: skew(-39deg);
+    transform: rotate(39deg);
     transform-origin: left top;
 }
 
@@ -568,6 +582,7 @@ img {
 .xiang {
     position: relative;
     background-color: transparent;
+    transform: scale(0.9);
 }
 
 .xiang .left_top_top_vertical {

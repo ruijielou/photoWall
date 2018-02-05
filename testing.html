@@ -7,4 +7,82 @@
 <body>
 	<svg id="isvg"  width="1000" height="1000"><defs>    <marker id="idtext"         viewBox="0 0 120 50" refX="0" refY="0"          markerUnits="strokeWidth" markerWidth="20" markerHeight="20"         orient="auto">        <text style="font-family:sans-serif; font-size:14pt;" x="20" y="20"> text </text>     </marker>     </defs><defs>   <marker id="idArrow" viewBox="0 0 20 20" refX="0" refY="10" markerUnits="strokeWidth" markerWidth="3" markerHeight="10" orient="auto">            <path d="M 0 0 L 20 10 L0 20 z"fill="purple"stroke="black"/>     </marker></defs><g >  <path d="M100  100 L105 100 L300 100"  stroke="blue"  stroke-width="3" fill="none" marker-mid="url(#idtext)"   marker-end="url(#idArrow)" /></g><g transform="rotate(339,220,730) translate(220,730) ">                <path d="M0 0 L100 0L500 0"  stroke="blue"  stroke-width="3" fill="none" marker-end="url(#idArrow)" marker-mid="url(#idtext)"   /></g></svg>
 </body>
+<script src="./js/jquery-2.2.3.js"></script>
+<script>
+function hexToRgb(hex)
+{
+    var rgb = [];
+    for(var i=1; i<7; i+=2){
+        rgb.push(parseInt("0x" + hex.slice(i,i+2)));
+    }
+    return rgb;
+}
+
+function rgbToHex(r, g, b)
+{
+    var hex = ((r<<16) | (g<<8) | b).toString(16);
+    return "#" + new Array(Math.abs(hex.length-7)).join("0") + hex;
+}
+
+
+function gradient (startColor,endColor,step)
+{
+	var sColor = '';
+	var eColor = '';
+    //将hex转换为rgb
+    if(startColor.indexOf('rgb') >= 0){
+    	var order = startColor.indexOf('(')
+      var str = startColor.replace(/rgb/, '').replace(/\(/, '').replace(/\)/, '').split(',');
+      var sColor = rgbToHex(str[0], str[1], str[2]);
+        
+    }else {
+    	sColor = hexToRgb(startColor)
+       //eColor = hexToRgb(endColor);
+
+    }
+    if(endColor.indexOf('rgb') >= 0){
+      var str = endColor.replace(/rgb/, '').replace(/\(/, '').replace(/\)/, '').split(',')
+        var sColor = rgbToHex(str[0], str[1], str[2]);
+    }else {
+    	//var sColor = hexToRgb(startColor),
+       eColor = hexToRgb(endColor);
+
+    }
+    // sColor = hexToRgb(startColor)
+    // eColor = hexToRgb(endColor)
+    console.log(sColor);
+    //计算R\G\B每一步的差值
+    var rStep = (eColor[0] - sColor[0]) / step;
+        gStep = (eColor[1] - sColor[1]) / step;
+        bStep = (eColor[2] - sColor[2]) / step;
+
+    var gradientColorArr = [];
+    for(var i=0;i<step;i++){
+        //计算每一步的hex值
+        gradientColorArr.push(rgbToHex(parseInt(rStep*i+sColor[0]),parseInt(gStep*i+sColor[1]),parseInt(bStep*i+sColor[2])));
+    }
+    return gradientColorArr;
+}
+
+var colors = gradient ('rgb(03,44,33)','#ffcc00',50);
+console.log(colors)
+html = '';
+for(var i = 0; i<colors.length; i++) {
+	
+	html += '<div class="colors" style="width: 100%;height: 10px;background:'+ colors[i] +'"></div>'
+	$('body').html(html);
+}
+
+
+ $("img[data-name='photo']").each(function (index, ele) {
+
+                        setTimeout(function () {
+
+                            $(ele).stop().animate({ opacity: 1 }, 200);
+
+                        }, 80 * index);
+
+                    });
+
+</script>
 </html>
